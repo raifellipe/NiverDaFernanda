@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Já é niver da Nandelícia ?</title>
+
+    <style type="text/css">
+        body{
+            background-color: black;
+            margin: 0%;
+        }
+
+        h1{
+            color: #fff;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 7em;
+            text-align: center;
+        } 
+
+        h2{
+
+            color: #fff;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 4em;
+            text-align: center;
+
+        }
+        img {
+            width: auto;
+            height: auto;
+            max-width: 70vw;
+        }
+        .imgal{
+
+                text-align: center;
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div></div><h2> Já é aniversário da Nandelícia ? </h2></div>
+
+  <div id= "simnao"><script>
+
+      let d = new Date();
+        if(d.getMonth()==10&&d.getDate()==5){
+            document.write("<h1>YEP!</h1><br><h2>Escolhendo video de aniversário...</h2>");
+            setTimeout(redirect, 2000);
+        }
+        else{
+            document.write("<h1>NOPE!</h1>");
+            criaBannerLateral(1);
+        }
+
+        function criaBannerLateral(qtdImagens) {  
+         imagens = new Array ("1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg",
+         "11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg");   
+         for(i = 0; i < qtdImagens; i++) 
+          {    
+             indImg = Math.round(Math.random()*(imagens.length - 1));    
+             banner = "images/"+imagens[indImg];    
+             document.write("<div class = 'imgal'><img src='" + banner + "' /></div>");  
+          }  
+        }
+
+        function redirect(){
+
+            links = new Array ("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "https://www.youtube.com/watch?v=1Mcdh2Vf2Xk", "https://www.youtube.com/watch?v=V43qtAxQcxQ",
+            "https://www.youtube.com/watch?v=ei2-RjJDBHc", "https://www.youtube.com/watch?v=ED6hAkiiFt4", "https://www.youtube.com/watch?v=AoX7v7VoldU",
+            "https://www.youtube.com/watch?v=3e14skRuVk0", "https://www.youtube.com/watch?v=riQSm7BqDUY", "https://www.youtube.com/watch?v=6FhNsxb0C-k",
+            "https://www.youtube.com/watch?v=S_pos2oAkvs", "https://www.youtube.com/watch?v=MtRz34Oh9rA", "https://www.youtube.com/watch?v=y7tuXSdqgPE",
+            "https://www.youtube.com/watch?v=_z-1fTlSDF0", "https://www.youtube.com/watch?v=KC-Uq-fN0TU", "https://www.youtube.com/watch?v=uOzTm2ewgVo",
+            "https://www.youtube.com/watch?v=RAQmKOsonhc", "https://www.youtube.com/watch?v=eAHWOm0CjJM", "https://www.youtube.com/watch?v=WZ_xOYbGAxc",
+            "https://www.youtube.com/watch?v=nAhe7DXm-UU", "https://www.youtube.com/watch?v=Vg5HIMnPx7k", "https://www.youtube.com/watch?v=MTjGqfYo4CY",
+            "https://www.youtube.com/watch?v=RaeLAwacDG4", "https://www.youtube.com/watch?v=fW-fVtTN_BA", "https://www.youtube.com/watch?v=y0Q9dbYQOPE",
+            "https://www.youtube.com/watch?v=snJBkPQXOPY" );
+            indImg = Math.round(Math.random()*(links.length - 1));
+            window.location.replace(links[indImg]);
+
+        }
+      
+        
+  </script></div>
+
+   
+
+</body>
+
+</html>
